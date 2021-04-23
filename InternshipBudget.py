@@ -1,3 +1,6 @@
+# Remember to create the empty budget.txt file #
+# I don't have your file path, or else I would have </3 #
+
 budget = open("budget.txt", "r+")
 def write():
     budget.truncate()
@@ -20,25 +23,30 @@ def write():
         price1 = float(input(name1))
         prices.append(price1)
         salary -= price1
-        str1 = str(i) + ", " + names[i] + ", " + str(prices[i]) + ", " + str(salary) + "\n"
+        salaryFormatted =  "{:.2f}".format(salary)
+        str1 = str(i+1) + ", " + names[i] + ", " + str(prices[i]) + ", " + str(salaryFormatted) + "\n"
         budget.write(str1)
         i += 1
-        print("You have " , str(salary), " left!\n")
+        print("You have " , str(salaryFormatted), " left!\n")
     
     perc = salary / ogSalary
     percentage = "{:.2%}".format(perc)
     percentage = str(percentage)
 
-    finalStr = "You will be making " + str(ogSalary) + " and will be retaining " + percentage + "percent of it\n"
+    finalStr = "You will be making " + str(ogSalary) + " and will be spending " + str(ogSalary - salary) + ", retaining " + percentage + " percent of it - leaving " + str(salaryFormatted) + "\n"
     budget.write(finalStr)
     if (salary > (ogSalary/2)):
-        budget.write("Let's go! You still have over half of your money. Be smart and invest that :)")
+        good = "Let's go! You still have over half of your money. Be smart and invest that :)\n"
+        budget.write(good)
     elif (salary > (ogSalary/4)):
-        budget.write("Sorry! ALl your remaining money has to be to invest! Don't make the rules around here boss :/")
+        okay = "Sorry! ALl your remaining money has to be to invest! Don't make the rules around here boss :/\n"
+        budget.write(okay)
     elif (salary > 0):
-        budget.write("Congrats! You still have money! Good for you bud :) But you should've invested\n")
+        bad = "Congrats! You still have money! Good for you bud :) But you should've invested\n"
+        budget.write(bad)
     elif (salary <= 0):
-        budget.write("Oopsies! You are gonna be a broke boy :( Try planning it out again!\n")
+        ohno = "Oopsies! You are gonna be a broke boy :( Try planning it out again!\n"
+        budget.write(ohno)
 
     budget.write("Thanks for trying Vineet's Internship Money Budgetter! Would love to connect sometime if you are 1. my friend 2. a recruiter 3. random stranger on the internet :)")
     return(0)
