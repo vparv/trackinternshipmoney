@@ -1,6 +1,4 @@
-# Remember to create the empty budget.txt file #
-# I don't have your file path, or else I would have </3 #
-
+# Check out the README.md if you have questions! 
 budget = open("budget.txt", "r+")
 def write():
     budget.truncate()
