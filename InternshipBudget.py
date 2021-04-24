@@ -46,19 +46,20 @@ def write():
         ohno = "Oopsies! You are gonna be a broke boy :( Try planning it out again!\n"
         budget.write(ohno)
 
-    budget.write("Thanks for trying Vineet's Internship Money Budgetter! Would love to connect sometime if you are 1. my friend 2. a recruiter 3. random stranger on the internet :)")
+    budget.write("Thanks for trying Vineet's Internship Money Budgetter!\n")
+    budget.write("I built this tool so I would avoid blowing my internship salary and so I can properly invest it (coming soon!).\n")
+    budget.write("Would love to connect sometime if you are 1. my friend 2. a recruiter 3. random stranger on the internet. Sorry Mom!:)\n")
     return(0)
 
 def read():
     readItems = budget.readlines()
     items = []
-    for d in range(0, len(readItems)-2):
+    for d in range(0, len(readItems)-5):
         
         split = readItems[d].split(", ")
         items.append(split)
         balance = items[d][3].split("\n")
         items[d][3] = balance[0]
-        #print(items[d])
 
     saveItems = items
     

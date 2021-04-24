@@ -1,0 +1,6 @@
+1, iPad, 1099.0, 20311.40
+You will be making 21410.4 and will be spending 1099.0, retaining 94.87% percent of it - leaving 20311.40
+Let's go! You still have over half of your money. Be smart and invest that :)
+Thanks for trying Vineet's Internship Money Budgetter!
+I built this tool so I would avoid blowing my internship salary and so I can properly invest it (coming soon!).
+Would love to connect sometime if you are 1. my friend 2. a recruiter 3. random stranger on the internet. Sorry Mom!:)
